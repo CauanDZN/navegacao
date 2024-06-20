@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links e Navegação</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  
+</html></pre>
+
+</head>
+
+<body>
+  <ul>
+    <li><a href="/contatos.html" target="_blank">Contatos</a></li>
+    <li><a href="/sobre-mim.html" target="_blank">Sobre mim</a></li>
+    <li><a href="/precos.html" target="_blank">Preços</a></li>
+    <li><a href="/servicos.html" target="_blank">Serviços</a></li>
+  </ul>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Step 1: Hash your email address using SHA-256.
+      const hashedEmail = CryptoJS.SHA256('allan.hal@gmail.com');
+      // Step 2: Construct the Gravatar URL.
+      const gravatarUrl = `https://www.gravatar.com/avatar/${hashedEmail}`;
+      // Step 3: Set the image source to the Gravatar URL.
+      document.getElementById('gravatar-image').src = gravatarUrl;
+      console.log(gravatarUrl)
+    });
+  </script>
+<img id="gravatar-image">
+</body>
+
+</html>
